@@ -1,0 +1,5 @@
+/home/jetson/deepstream_reference_apps/yolo/data/1.jpg
+/home/jetson/deepstream_reference_apps/yolo/data/2.jpg
+/home/jetson/deepstream_reference_apps/yolo/data/3.jpeg
+/home/jetson/deepstream_reference_apps/yolo/data/4.JPG
+/home/jetson/deepstream_reference_apps/yolo/data/5.jpeg

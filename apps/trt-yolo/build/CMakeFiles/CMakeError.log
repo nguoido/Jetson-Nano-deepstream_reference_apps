@@ -1,0 +1,56 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20792/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20792.dir/build.make CMakeFiles/cmTC_20792.dir/build
+make[1]: Entering directory '/home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_20792.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -std=c++11 -Wall -Wunused-function -Wunused-variable -Wfatal-errors    -o CMakeFiles/cmTC_20792.dir/CheckSymbolExists.cxx.o -c /home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_20792
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20792.dir/link.txt --verbose=1
+/usr/bin/c++  -std=c++11 -Wall -Wunused-function -Wunused-variable -Wfatal-errors     CMakeFiles/cmTC_20792.dir/CheckSymbolExists.cxx.o  -o cmTC_20792 
+CMakeFiles/cmTC_20792.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.cxx:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20792.dir/build.make:97: recipe for target 'cmTC_20792' failed
+make[1]: *** [cmTC_20792] Error 1
+make[1]: Leaving directory '/home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_20792/fast' failed
+make: *** [cmTC_20792/fast] Error 2
+
+File /home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4075c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4075c.dir/build.make CMakeFiles/cmTC_4075c.dir/build
+make[1]: Entering directory '/home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4075c.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -std=c++11 -Wall -Wunused-function -Wunused-variable -Wfatal-errors -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4075c.dir/CheckFunctionExists.cxx.o -c /home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_4075c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4075c.dir/link.txt --verbose=1
+/usr/bin/c++  -std=c++11 -Wall -Wunused-function -Wunused-variable -Wfatal-errors -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4075c.dir/CheckFunctionExists.cxx.o  -o cmTC_4075c -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4075c.dir/build.make:97: recipe for target 'cmTC_4075c' failed
+make[1]: *** [cmTC_4075c] Error 1
+make[1]: Leaving directory '/home/jetson/deepstream_reference_apps/apps/trt-yolo/build2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4075c/fast' failed
+make: *** [cmTC_4075c/fast] Error 2
+
+
