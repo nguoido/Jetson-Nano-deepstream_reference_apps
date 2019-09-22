@@ -25,6 +25,7 @@ SOFTWARE.
 #include "ds_image.h"
 #include <experimental/filesystem>
 
+
 DsImage::DsImage() :
     m_Height(0),
     m_Width(0),
@@ -46,7 +47,7 @@ DsImage::DsImage(const std::string& path, const int& inputH, const int& inputW) 
     m_ImageName()
 {
     m_ImageName = std::experimental::filesystem::path(path).stem().string();
-    m_OrigImage = cv::imread(path, CV_LOAD_IMAGE_COLOR);
+    m_OrigImage = cv::imread(path, cv::IMREAD_COLOR);
 
     if (!m_OrigImage.data || m_OrigImage.cols <= 0 || m_OrigImage.rows <= 0)
     {
